@@ -36,7 +36,7 @@ object Build1 : BuildType({
     steps {
         script {
             name = "bb"
-            id = "simpleRunner sp"
+            id = "simpleRunner(my)"
             scriptContent = "echo a"
         }
     }
