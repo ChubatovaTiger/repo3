@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
@@ -31,6 +32,14 @@ project {
     buildType(Build1)
 
     features {
+        amazonEC2CloudImage {
+            id = "PROJECT_EXT_2"
+            profileId = "amazon-1"
+            vpcSubnetId = "subnet-043178c302cabfe37"
+            instanceType = "t3.medium"
+            securityGroups = listOf("sg-072d8bfa0626ea2a6")
+            source = Source("ami-0bac84ec5a4017f06")
+        }
         amazonEC2CloudProfile {
             id = "amazon-1"
             name = "bb"
