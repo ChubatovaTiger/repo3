@@ -35,6 +35,7 @@ project {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_2"
             profileId = "amazon-1"
+            agentPoolId = "-2"
             vpcSubnetId = "subnet-043178c302cabfe37"
             instanceType = "t3.medium"
             securityGroups = listOf("sg-072d8bfa0626ea2a6")
