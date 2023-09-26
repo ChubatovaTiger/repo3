@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 /*
@@ -28,6 +29,18 @@ version = "2023.05"
 project {
 
     buildType(Build1)
+
+    features {
+        amazonEC2CloudProfile {
+            id = "amazon-1"
+            name = "bb"
+            terminateIdleMinutes = 0
+            region = AmazonEC2CloudProfile.Regions.EU_WEST_DUBLIN
+            authType = instanceIAMRole()
+            param("secure:access-id", "credentialsJSON:99126818-d5fd-49c1-969e-3d21b141cc85")
+            param("secure:secret-key", "credentialsJSON:99126818-d5fd-49c1-969e-3d21b141cc85")
+        }
+    }
 }
 
 object Build1 : BuildType({
