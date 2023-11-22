@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudImage
 import jetbrains.buildServer.configs.kotlin.amazonEC2CloudProfile
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.matrix
 
 /*
 The settings script is an entry point for defining a TeamCity
@@ -25,7 +26,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2023.05"
+version = "2023.11"
 
 project {
 
@@ -61,6 +62,15 @@ object Build1 : BuildType({
             name = "bb"
             id = "simpleRunner%"
             scriptContent = "echo a"
+        }
+    }
+
+    features {
+        matrix {
+            param("a", listOf(
+                value("1"),
+                value("2")
+            ))
         }
     }
 })
