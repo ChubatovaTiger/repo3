@@ -123,4 +123,10 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
 
 object Chain : Project({
     name = "chain"
+
+    buildType(Chain_Build1)
+})
+
+object Chain_Build1 : BuildType({
+    name = "build1"
 })
