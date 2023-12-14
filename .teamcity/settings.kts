@@ -52,6 +52,7 @@ object Build1 : BuildType({
 
     features {
         parallelTests {
+            enabled = false
             numberOfBatches = 2
         }
     }
