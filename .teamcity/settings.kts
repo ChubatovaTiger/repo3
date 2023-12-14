@@ -36,6 +36,8 @@ project {
     buildType(Matr)
     buildType(Build1)
     buildType(Build2)
+
+    subProject(Chain)
 }
 
 object Build1 : BuildType({
@@ -116,4 +118,9 @@ object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
     url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     branch = "refs/heads/master"
     branchSpec = "refs/heads/(*)"
+})
+
+
+object Chain : Project({
+    name = "chain"
 })
