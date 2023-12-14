@@ -134,6 +134,12 @@ object Chain_Build1 : BuildType({
     vcs {
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f2")
     }
+
+    dependencies {
+        snapshot(Chain_Build2) {
+            reuseBuilds = ReuseBuilds.NO
+        }
+    }
 })
 
 object Chain_Build2 : BuildType({
