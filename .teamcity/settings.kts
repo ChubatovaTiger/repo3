@@ -125,10 +125,19 @@ object Chain : Project({
     name = "chain"
 
     buildType(Chain_Build1)
+    buildType(Chain_Build2)
 })
 
 object Chain_Build1 : BuildType({
     name = "build1"
+
+    vcs {
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f2")
+    }
+})
+
+object Chain_Build2 : BuildType({
+    name = "build2"
 
     vcs {
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f2")
