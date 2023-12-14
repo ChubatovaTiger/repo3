@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildFeatures.parallelTests
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
@@ -45,6 +46,12 @@ object Build1 : BuildType({
             id = "gradle_runner"
             tasks = "clean build"
             jdkHome = "%env.JDK_11_0%"
+        }
+    }
+
+    features {
+        parallelTests {
+            numberOfBatches = 2
         }
     }
 })
