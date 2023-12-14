@@ -129,4 +129,8 @@ object Chain : Project({
 
 object Chain_Build1 : BuildType({
     name = "build1"
+
+    vcs {
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+    }
 })
