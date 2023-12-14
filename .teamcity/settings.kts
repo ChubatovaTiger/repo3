@@ -73,13 +73,13 @@ object Matr : BuildType({
     name = "matr"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, .=>f3)
     }
 
     steps {
         script {
             id = "simpleRunner"
-            scriptContent = "ls f1"
+            scriptContent = "ls f3"
         }
     }
 
