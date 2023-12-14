@@ -87,6 +87,10 @@ object Build2 : BuildType({
 
 object Matr : BuildType({
     name = "matr"
+
+    vcs {
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+    }
 })
 
 object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
