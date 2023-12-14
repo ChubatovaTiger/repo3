@@ -46,6 +46,8 @@ object Build1 : BuildType({
         gradle {
             id = "gradle_runner"
             tasks = "clean build"
+            buildFile = "build.gradle"
+            workingDir = "folder"
             jdkHome = "%env.JDK_11_0%"
         }
     }
