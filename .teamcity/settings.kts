@@ -31,6 +31,7 @@ project {
 
     vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
 
+    buildType(Matr)
     buildType(Build1)
     buildType(Build2)
 }
@@ -82,6 +83,10 @@ object Build2 : BuildType({
             numberOfBatches = 2
         }
     }
+})
+
+object Matr : BuildType({
+    name = "matr"
 })
 
 object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
