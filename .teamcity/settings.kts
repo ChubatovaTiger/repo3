@@ -7,7 +7,7 @@ version = "2023.11"
 
 project {
 
-    vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+    vcsRoot(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup2)
 
     buildType(Build1)
     buildType(Build2)
@@ -17,7 +17,7 @@ object Build1 : BuildType({
     name = "build1"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>folder2")
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup2, ".=>folder2")
         root(DslContext.settingsRoot, "+:. => .a")
     }
 
@@ -42,7 +42,7 @@ object Build2 : BuildType({
     name = "build2"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup2)
         root(DslContext.settingsRoot, "+:. => .a")
     }
 
@@ -62,8 +62,8 @@ object Build2 : BuildType({
     }
 })
 
-object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup : GitVcsRoot({
-    name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
+object HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup2 : GitVcsRoot({
+    name = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup2"
     url = "https://github.com/ChubatovaTiger/ChubatovaGradleTestsBackup"
     branch = "refs/heads/master"
     branchSpec = "refs/heads/(*)"
