@@ -2,6 +2,7 @@ import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.parallelTests
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.matrix
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
@@ -97,6 +98,15 @@ object Matr : BuildType({
         script {
             id = "simpleRunner"
             scriptContent = "ls f1"
+        }
+    }
+
+    features {
+        matrix {
+            param("a1", listOf(
+                value("2"),
+                value("3")
+            ))
         }
     }
 })
