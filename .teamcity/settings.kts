@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildFeatures.parallelTests
 import jetbrains.buildServer.configs.kotlin.buildSteps.gradle
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 /*
@@ -90,6 +91,13 @@ object Matr : BuildType({
 
     vcs {
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f1")
+    }
+
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "ls f1"
+        }
     }
 })
 
