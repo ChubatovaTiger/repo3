@@ -39,7 +39,7 @@ object Build1 : BuildType({
 
     vcs {
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
-        root(DslContext.settingsRoot)
+        root(DslContext.settingsRoot, "+:. => .a")
     }
 
     steps {
