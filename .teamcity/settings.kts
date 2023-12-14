@@ -38,7 +38,7 @@ object Build1 : BuildType({
     name = "build1"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>folder")
         root(DslContext.settingsRoot, "+:. => .a")
     }
 
