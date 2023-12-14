@@ -112,9 +112,14 @@ object Chain_Build1 : BuildType({
     name = "build1"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f2")
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
     }
-
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = "ls"
+        }
+    }
     dependencies {
         snapshot(Chain_Build3) {
             reuseBuilds = ReuseBuilds.NO
