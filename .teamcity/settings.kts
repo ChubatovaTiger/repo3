@@ -131,6 +131,6 @@ object Chain_Build1 : BuildType({
     name = "build1"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f2")
     }
 })
