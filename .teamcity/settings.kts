@@ -73,7 +73,7 @@ object Matr : BuildType({
     name = "matr"
 
     vcs {
-        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, .=>f3)
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>f3")
     }
 
     steps {
