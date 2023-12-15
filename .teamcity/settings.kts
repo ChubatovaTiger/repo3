@@ -35,6 +35,7 @@ project {
 
     buildType(Matr)
     buildType(Build1)
+    buildType(Build1rep)
     buildType(Build2)
 
     subProject(Chain)
@@ -42,6 +43,31 @@ project {
 
 object Build1 : BuildType({
     name = "build1"
+
+    vcs {
+        root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>folder")
+        root(DslContext.settingsRoot, "+:. => .a")
+    }
+
+    steps {
+        gradle {
+            id = "gradle_runner"
+            tasks = "clean build"
+            buildFile = "build.gradle"
+            workingDir = "folder"
+            jdkHome = "%env.JDK_11_0%"
+        }
+    }
+
+    features {
+        parallelTests {
+            numberOfBatches = 2
+        }
+    }
+})
+
+object Build1rep : BuildType({
+    name = "build1rep"
 
     vcs {
         root(HttpsGithubComChubatovaTigerChubatovaGradleTestsBackup, ".=>folder")
