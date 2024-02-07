@@ -38,7 +38,7 @@ object Build1 : BuildType({
     }
 
     vcs {
-        root(DslContext.settingsRoot, "+:.", "-:folder1")
+        root(DslContext.settingsRoot, "-:folder1")
     }
 
     steps {
