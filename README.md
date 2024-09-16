@@ -1,1 +1,1 @@
-# repo3
+echo "This is my project"
