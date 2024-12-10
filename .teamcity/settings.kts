@@ -1,3 +1,4 @@
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.*
 
 /*
