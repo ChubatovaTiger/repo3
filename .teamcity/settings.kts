@@ -35,7 +35,7 @@ object Build1 : BuildType({
     name = "build1"
 
     enablePersonalBuilds = false
-    type = BuildTypeSettings.Type.COMPOSITE
+    //type = BuildTypeSettings.Type.COMPOSITE
     maxRunningBuilds = 1
 
     params {
@@ -46,10 +46,11 @@ object Build1 : BuildType({
         showDependenciesChanges = true
     }
 
-    dependencies {
+   /* dependencies {
         snapshot(Build2) {
         }
     }
+*/
 })
 
 object Build2 : BuildType({
