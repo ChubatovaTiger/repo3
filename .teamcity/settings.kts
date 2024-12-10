@@ -53,4 +53,16 @@ object Build1 : BuildType({
 
 object Build2 : BuildType({
     name = "build2"
+    steps {
+        script {
+            id = "simpleRunner"
+            scriptContent = """
+                echo "##teamcity[testStarted name='MyTest.test2']"
+                sleep 2
+                echo "##teamcity[testFailed type='comparisonFailure' name='MyTest.test2' message='failure message' details='message and stack trace' expected='expected value' actual='actual value']"
+                echo "##teamcity[testFinished name='MyTest.test2']"
+                sleep 2
+            """.trimIndent()
+        }
+    }
 })
