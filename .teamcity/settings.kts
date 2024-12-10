@@ -37,6 +37,10 @@ object Build1 : BuildType({
     type = BuildTypeSettings.Type.COMPOSITE
     maxRunningBuilds = 1
 
+    params {
+        param("par1", "1")
+    }
+
     vcs {
         showDependenciesChanges = true
     }
