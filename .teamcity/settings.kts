@@ -27,7 +27,7 @@ version = "2024.12"
 
 project {
 
-    buildType(Build2)
+    //buildType(Build2)
     buildType(Build1)
 }
 
@@ -52,7 +52,7 @@ object Build1 : BuildType({
     }
 */
 })
-
+/*
 object Build2 : BuildType({
     name = "build2"
 
@@ -69,3 +69,4 @@ object Build2 : BuildType({
         }
     }
 })
+*/
