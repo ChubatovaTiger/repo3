@@ -1,0 +1,8 @@
+jobs:
+  Job1:
+    name: Job 1
+    steps: []
+    repositories:
+      - Project3_ChubatovaTiger74212:
+          path: '74212'
+          enabled: true
