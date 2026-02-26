@@ -3,6 +3,6 @@ jobs:
     name: Job 1
     steps: []
     repositories:
-      - Project3_ChubatovaTiger74212:
+      - Project3copy_ChubatovaTiger74212copy:
           path: '74212'
           enabled: true
