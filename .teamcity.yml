@@ -9,6 +9,7 @@ jobs:
       job1par2: job1par2val
     output-parameters:
       job1par1: '%job1par1%'
+    allow-reuse: false
   Job2:
     name: Job 2
     dependencies:
@@ -16,5 +17,7 @@ jobs:
     steps:
       - type: script
         script-content: echo %job.Job1.job1par1%
+    allow-reuse: false
   Job3:
     name: Job 3
+    allow-reuse: false
