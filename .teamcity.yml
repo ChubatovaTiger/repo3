@@ -16,7 +16,9 @@ jobs:
       - Job1
     steps:
       - type: script
-        script-content: echo %job.Job1.job1par1%
+        script-content: |-
+          echo %job.Job1.job1par1%
+          echo %job.Job1.job1par2%
     allow-reuse: false
   Job3:
     name: Job 3
