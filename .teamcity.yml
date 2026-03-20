@@ -23,3 +23,6 @@ jobs:
   Job3:
     name: Job 3
     allow-reuse: false
+    steps:
+      - type: script
+        script-content: echo %job.Job1.job1par1%
