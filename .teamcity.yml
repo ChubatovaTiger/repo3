@@ -1,4 +1,20 @@
 jobs:
   Job1:
     name: Job 1
-    steps: []
+    steps:
+      - type: script
+        script-content: echo %job1par1%
+    parameters:
+      job1par1: job1par1val
+      job1par2: job1par2val
+    output-parameters:
+      job1par1: '%job1par1%'
+  Job2:
+    name: Job 2
+    dependencies:
+      - Job1
+    steps:
+      - type: script
+        script-content: echo %job.Job1.job1par1%
+  Job3:
+    name: Job 3
