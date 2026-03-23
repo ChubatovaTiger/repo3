@@ -24,5 +24,3 @@ jobs:
     name: Job 3
     allow-reuse: false
     steps: []
-    parameters:
-      par2: '%job.Job1.job1par1%'
